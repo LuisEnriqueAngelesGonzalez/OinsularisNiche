@@ -2,7 +2,7 @@
 Code to replicate the paper "Global climate changes over time shape the environmental niche distribution of Octopus insularis in the Atlantic Ocean"
 
 
-In order to replicate the results, open the octopusNiche.Rproj and you have to follow the order provided in the code folder:
+In order to replicate the results, open the OinsularisNiche.Rproj and you have to follow the order provided in the code folder:
 
         0_auxiliar_functions.R (You do not need to run this code. It will be called from the following scripts).
         1_niche_model_maxent.R
