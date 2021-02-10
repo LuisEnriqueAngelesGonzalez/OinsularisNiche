@@ -80,7 +80,7 @@ out_format  <- "logistic" # Type of output of the model
 project     <- TRUE # Project model to scenarios
 G_var_dir   <- "G_variables"   #here is the RCP scenarios (.asc)
 ext_type    <- "ext"# We allow our model to extrapolate. See ext_type help
-write_mess  <- TRUE
+write_mess  <- TRUE # Generate MESS maps (extrapolation risk)
 write_clamp <- TRUE
 wait1       <- FALSE
 run1        <- TRUE
@@ -106,30 +106,3 @@ kuenm_mod(occ.joint   = occ_joint,
           wait        = wait1, 
           run         = run1)
 
-
-# After tun the code above, select and open the file Final_models.bat in order to 
-# generate all the models that will be saved in the Final_Models folder
-
-# -------------------------------------------------------------------------
-# Non analogous conditions analysis ---------------------------------------
-# -------------------------------------------------------------------------
-
-sets_var <- "Set1" # here a vector of various sets can be used
-out_mop  <- "MOP_results"
-percent  <- 10
-paral    <- FALSE # make this true to perform MOP calculations in parallel, recommended
-# only if a powerfull computer is used (see function's help)
-# Two of the variables used here as arguments were already created for previous functions
-
-
-kuenm_mmop(G.var.dir = G_var_dir, 
-           M.var.dir = M_var_dir, 
-           is.swd    = FALSE,  
-           sets.var  = sets_var, 
-           out.mop   = out_mop,
-           percent   = percent, 
-           parallel  = paral, 
-           comp.each = 100)
-
-
-# The analysis is finished
