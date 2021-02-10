@@ -7,8 +7,6 @@ In order to replicate the results, open the OinsularisNiche.Rproj and you have t
         0_auxiliar_functions.R (You do not need to run this code. It will be called from the following scripts).
         1_niche_model_maxent.R
         2_binary_maps.R
-        3_physiology_maps.R
-        4_cut_count.R
 
 All the scripts have comments for an easy understanding of the process.
 
