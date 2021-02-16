@@ -32,7 +32,11 @@ kuenm_cal(occ.joint   = occ_joint,
           wait        = wait, run = run)
 
 # After run the code above, select and open the file Candidate_models.bat in order to generate all the models that
-# will be saved in the Candidate_Models folder.
+# will be saved in the Candidate_Models folder
+# for MAC users the instructions above (line 35-36) are unnecessary
+# If you find this error “unable to access jarfile” while you run the “1_niche_model_maxent” code, 
+# replace “maxent_path <- maxent” for “maxent_path <- "the complete path of your maxent.jar file"
+# For example: "/Users/yourname/Documents/maxent” 
 
 
 # -------------------------------------------------------------------------
@@ -47,7 +51,7 @@ iterations   <- 100       # number of iterations
 kept         <- FALSE     # to keep (TRUE) or delete (FALSE) the candidate models 
 selection    <- "OR_AICc"      # Omission rate and Delta Akaike
 paral_proc   <- FALSE # make this true to perform pROC calculations in parallel, recommended
-# only if a powerfull computer is used (see function's help)
+# only if a powerful computer is used (see function's help)
 # Note, some of the variables used here as arguments were already created for previous function
 
 cal_eval <- kuenm_ceval(path          = out_dir, 
@@ -64,7 +68,7 @@ cal_eval <- kuenm_ceval(path          = out_dir,
                         parallel.proc = paral_proc)
 
 
-### For replicate the results select only the model wirh lowest Delta Akaike
+### For replicate the results select only the model with lowest Delta Akaike
 ### value
 
 # -------------------------------------------------------------------------
